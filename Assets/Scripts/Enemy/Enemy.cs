@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour, IHealth
 		health = maxHealth;
 		agent.Init(map);
 		agent.SetSpeed(enemyData.SpeedMove);
-		WaitDash();
+		StartCoroutine(WaitDash());
 		this.map = map;
 		SetDestination();
 		agent.OnPathComplite += SetDestination;
